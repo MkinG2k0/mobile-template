@@ -1,0 +1,7 @@
+{
+  "name": "mobile template",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
