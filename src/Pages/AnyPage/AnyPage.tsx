@@ -1,11 +1,34 @@
-import { NavLink } from 'react-router-dom'
-import { ROUTES } from 'Routes/Routes'
+import {
+	IonBackButton,
+	IonButtons,
+	IonContent,
+	IonHeader,
+	IonTitle,
+	IonToolbar
+} from '@ionic/react'
+import { takePicture } from 'Helper/Camera'
+import { useEffect } from 'react'
 
 function AnyPage() {
+
+	useEffect(() => {
+		takePicture()
+	}, [])
+
 	return (
-		<div>
-			AnyPage <NavLink to={ROUTES.MAIN}>Main</NavLink>
-		</div>
+		<>
+			<IonHeader>
+				<IonToolbar>
+					<IonButtons slot="start">
+						<IonBackButton></IonBackButton>
+					</IonButtons>
+					<IonTitle>Page Two</IonTitle>
+				</IonToolbar>
+			</IonHeader>
+			<IonContent class="ion-padding">
+				<h1>Page Two</h1>
+			</IonContent>
+		</>
 	)
 }
 

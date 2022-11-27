@@ -12,6 +12,8 @@
 * Eslint
 * Prettier
 * Axios
+* Ionic
+* Capacitor
 
 dev server    
 add in capacitor config
